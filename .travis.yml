@@ -1,0 +1,32 @@
+# Quick boot options
+sudo: false
+cache:
+  directories:
+    - node_modules
+
+# Ignore version tags
+branches:
+  except:
+    - /^v[0-9]/
+
+# Language options
+language: node_js
+node_js:
+  - '0.10'
+
+env:
+  global:
+    # COVERALLS_REPO_TOKEN
+    # Your repos are syncing... (never)
+    # SAUCE_TOKENS
+    - secure: O+KC37jNMSjQslbEB2bJhfFHRWrT8s6olCzboblfEduRxEmftUfvKZKGpTrfEzot1CHB6OlSRlUVyrFtfOXGFNGEm4MXAS1QtMwMElgzbrwM+Zfhen+dTeEWgsdrXEydzsX7BhMztYnhd5LqHejUeG16OJHDB15z6NsUeSrufH15VLCJxvZHa48xZ74KvZGRWgGUenI3MaUYFtwQSl1RZQ4vuzt/fM7kAU0k5puEz3hRgEnBYEJ7+gRWHDXS+LfmdQ7s/4Q8mZ6dEsFSfrj9m4xzVhesnUN72f5rnSr3LO/eAi8Yl4+dLZFEQysa3fZe8hqMwkuRzv1iRxR66VivczYcd3EhH7brwWOI7ssRriRJ6PEEbDu6bnGGscf7QG/hdBWveA8ajn0HTu9taGKNGZtBmeWopBvBmv25DOPpbc5eh44fXhN2ayu4qJo1Qk+3zJbEpiaKJC4wDkyG5YJG5/Ml0D2mJC9vHemzW4tGwc99ZG5Ld0pin3SgTcFobGvRbyyvLXlOlty3sICF/dC26aB46V5BhNaOpu65MwcqLRdyAxURYFyyL1NzS2s85aR7DjmhVsQqUjoIDHyCS1HZXdJpB1paD/N7MqHKsbu50c/w/13jqBzh8p4bRDGbqcTtWlpxTJ/weSIfzYkR1zxEtSffZUL5uFQwd7jujbXf+NI=
+    - secure: Db+BXrKhRyOy6MWIMU+rqS6JYnCWSv1Ypa3S2b9C3xgjCUOawzIleXYJPALslu2hnSdqwUQSw3XoBIpJ0DvoA1znSmqwIw5WGkrAL53CJHKPHFJ2orsCTeQ9k42TqS9YY1XQldWTJLpMpxZyrUqskJ6RrQLnADyVQk/dk0qUrZ8y/yVT+RyFPBAMpKVXROQUMrrh2i1QQ7dJDR1Ic3FR5qeyzKRIvy6r2lAJWSqChASTvCPG73zhWgNXg4ysSpVTeEpC1fRJTS2cNc1ss5riyEgebeaSHk2I2VDROCJOk6+cOlHx3nVmG8R1tLeJD2IdLHy1VoEWk51cjFPNYoHnR0t6ITt3yVQMs0CV8UmaQJxZ7FFBaO9HjShupFrj2s+v0orr5nWckpNZ0reZQjy8x1U+qtxqrT1/mWy+Pjfs+5Y4VRiUNK89yW5uP58mNGs+B5IWOz5P3SgLAopqEcLfE3QHXn/uu5l15eX6FPJWB8lyfBfen8X6cA6ZceS6/lcUOZBUVI2JFLy7qnDtfcNT/5vY7z6+JCZyXizA3cOU6OmaCT+mNKfHUlarkYnr/EA4MSNdxE4kWx1J+v0VwVLQxOtmO7oscHy7rtHn4v9o/fLtlDkSzRalhnuTCoRpsVUk2fUoBiOuMl6MT8cbAZ+Ppogw29yLMPj4RunYUdFvX6U=
+
+# Npm publish options
+before_deploy:
+  - npm install coffee-script --global
+deploy:
+  provider: npm
+  email: i59naga@icloud.com
+  api_key:
+    secure: nJbM4zBjulF51rrssyygz2LYhRLggf6/duqDwSqSABFi9hYGIuxlZLA8SSjWSa9ZwheO/pW5ZsUFd4i4TiIbIUvgEA5pyV3M1X+GMf+51cXHLNlxIpZggoL/2GmqZXpz02tNp87IJoFIoQbI3hZXQ+OaJLqYwhQa1DzXRCHoZ+/RYiFLwCX1hFIhaqjx41Dc4tNh+MZHc1ergTqrE/qwP4RJ0EiqP76x9z+X1z8BKAxQ1xCQdrS5XT/E/DgcRhQvrLl3cVeLMRzC+StQapnXtOL6rrZ+ajarhPGyARGcXDQ725pf6QjO9tHCCV1WKQdQKFhuBLobznGua1AoHsu1e7g4sri40JN0qMH2aJNs5wmNFq9aUDJ8WvqNYaQEi7DGn2jzFTqGpG3PBnuVMmLK9ebv/l0v0WJhDdluy5ZmLTtF5qwRyI/JptskhrP4Um3Kkfl+/mtvOqnYA/aOppgZsf0O3wHMAB0xV1HB2CBkaV6OWej1LMI7ewqQ2kAmpAYoy36RmBTTOihfse9XEvVuSRJxCsY5is8tOe9WFa4xUYNkAyiKbLmFhME5QVT/2bjBuVoLabe+uXHSDgruV+PTzdQS7TfSDuojr/sBpDretfobQtHTDYoza93iQuhOLWSV9vBT7vBX+A0vNsRIb+hY5ksATGBado/OyJKBx9zSChs=
