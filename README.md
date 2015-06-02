@@ -2,7 +2,7 @@
 
 [![Sauce Test Status][sauce-image]][sauce]
 
-> Parse Bitmap to ImageData in cross-platform.
+> Parse BMP to ImageData in cross-platform.
 
 ## Installation
 ```bash
