@@ -21,7 +21,7 @@ return `images` is Array contains one or more `ImageData`.
 > Return the `object` instead of `ImageData` in Node.js
 
 ```js
-var file= 'https://59naga.github.io/fixtures/still.JPG';
+var file= 'https://59naga.github.io/fixtures/still.BMP';
 
 pixelBitmap.parse(file).then(function(images){
   console.log(images[0]);
