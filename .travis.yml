@@ -30,3 +30,8 @@ deploy:
   email: i59naga@icloud.com
   api_key:
     secure: nJbM4zBjulF51rrssyygz2LYhRLggf6/duqDwSqSABFi9hYGIuxlZLA8SSjWSa9ZwheO/pW5ZsUFd4i4TiIbIUvgEA5pyV3M1X+GMf+51cXHLNlxIpZggoL/2GmqZXpz02tNp87IJoFIoQbI3hZXQ+OaJLqYwhQa1DzXRCHoZ+/RYiFLwCX1hFIhaqjx41Dc4tNh+MZHc1ergTqrE/qwP4RJ0EiqP76x9z+X1z8BKAxQ1xCQdrS5XT/E/DgcRhQvrLl3cVeLMRzC+StQapnXtOL6rrZ+ajarhPGyARGcXDQ725pf6QjO9tHCCV1WKQdQKFhuBLobznGua1AoHsu1e7g4sri40JN0qMH2aJNs5wmNFq9aUDJ8WvqNYaQEi7DGn2jzFTqGpG3PBnuVMmLK9ebv/l0v0WJhDdluy5ZmLTtF5qwRyI/JptskhrP4Um3Kkfl+/mtvOqnYA/aOppgZsf0O3wHMAB0xV1HB2CBkaV6OWej1LMI7ewqQ2kAmpAYoy36RmBTTOihfse9XEvVuSRJxCsY5is8tOe9WFa4xUYNkAyiKbLmFhME5QVT/2bjBuVoLabe+uXHSDgruV+PTzdQS7TfSDuojr/sBpDretfobQtHTDYoza93iQuhOLWSV9vBT7vBX+A0vNsRIb+hY5ksATGBado/OyJKBx9zSChs=
+
+# Cloud testing
+after_deploy:
+  - npm install
+  - npm run test-cloud

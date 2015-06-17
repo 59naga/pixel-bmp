@@ -2,16 +2,16 @@
 PixelUtil= (require 'pixel-util').PixelUtil
 bitmapJs= require 'bmp-js'
 
-class pixelBitmap extends PixelUtil
+class PixelBitmap extends PixelUtil
   parse: (file)->
     @createBuffer file
     .then (buffer)=>
       bitmap= bitmapJs.decode buffer
 
       image= @createImageData bitmap.width,bitmap.height
-      image.data.set bitmap.data
+      @set image,bitmap
 
       [image]
 
-module.exports= new pixelBitmap
-module.exports.pixelBitmap= pixelBitmap
+module.exports= new PixelBitmap
+module.exports.PixelBitmap= PixelBitmap

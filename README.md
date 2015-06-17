@@ -2,7 +2,7 @@
 
 [![Sauce Test Status][sauce-image]][sauce]
 
-> Parse BMP to ImageData in cross-platform.
+> Parse Bitmap to ImageData in cross-platform.
 
 ## Installation
 ```bash
@@ -32,13 +32,15 @@ pixelBitmap.parse(file).then(function(images){
 # Unsupport
 * __32bit bitmap__
 
-# See
-* [pixel](https://github.com/59naga/pixel/)
+# Related projects
 * [pixel-util](https://github.com/59naga/pixel-util/)
 * [pixel-gif](https://github.com/59naga/pixel-gif-/)
 * [pixel-png](https://github.com/59naga/pixel-png/)
 * [pixel-jpg](https://github.com/59naga/pixel-jpg/)
 * __pixel-bmp__
+* [pixel](https://github.com/59naga/pixel/)
+* [pixel-to-ansi](https://github.com/59naga/pixel-to-ansi/)
+* [pixel-to-svg](https://github.com/59naga/pixel-to-svg/)
 
 License
 ---

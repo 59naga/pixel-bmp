@@ -12,12 +12,11 @@
   },
 
   "scripts": {
-    "start": "jasminetea test --verbose --watch",
+    "start": "jasminetea test --watch",
     "localhost": "zuul test/api.spec --local 59798 --open",
 
-    "cover": "jasminetea test --verbose --cover --report",
-    "test": "npm run cover",
-    "posttest": "zuul test/api.spec && echo Perfect posttest || echo Ignored posttest",
+    "test": "jasminetea test --cover --report --lint",
+    "test-cloud": "zuul test/api.spec",
 
     "prepublish": "node -e \"if(process.env.TRAVIS){}else{process.exit(1)}\" && npm run compile || echo skip prepublish",
     "compile": "coffee --bare --compile index.coffee",
@@ -25,7 +24,7 @@
   },
   "config": {
     "ghooks": {
-      "pre-commit": "npm run cover"
+      "pre-commit": "npm test"
     }
   },
   
@@ -33,7 +32,7 @@
   "license": "MIT",
   "dependencies": {
     "bmp-js": "0.0.1",
-    "pixel-util": "0.0.0-beta.2"
+    "pixel-util": "0.0.0-beta.3"
   },
   "devDependencies": {
     "brfs": "^1.4.0",
@@ -42,7 +41,6 @@
     "fixture-images": "^0.1.4",
     "ghooks": "^0.3.2",
     "jasminetea": "^0.2.1-alpha.2",
-    "object-parser-cli": "0.0.0",
     "zuul": "^3.0.0"
   },
 
