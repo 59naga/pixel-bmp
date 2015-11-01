@@ -1,6 +1,6 @@
 {
   "name": "pixel-bmp",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Parse Bitmap to ImageData in cross-platform",
 
   "main": "lib",
@@ -26,7 +26,7 @@
   
   "dependencies": {
     "bmp-js": "^0.0.1",
-    "pixel-util": "^0.0.1"
+    "pixel-util": "^0.0.2"
   },
   "devDependencies": {
     "brfs": "^1.4.1",
